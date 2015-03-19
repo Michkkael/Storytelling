@@ -44,11 +44,11 @@ function init() {
 		.lineTo(1350, -850, {
 			name: "follow"
 		})
-		// Arc and rotate back to the beginning.
-		.arc(1300, 50, 900, -Math.PI/2, -Math.PI, true, {rotate: Math.PI*2, name: "end"});
+//		// Arc and rotate back to the beginning.
+//		.arc(1300, 50, 900, -Math.PI/2, -Math.PI, true, {rotate: Math.PI*2, name: "end"});
 
 	// We're done with the path, let's initate the plugin on our wrapper element
-	$(".wrapper").scrollPath({drawPath: true, wrapAround: true});
+	$(".wrapper").scrollPath({drawPath: true, wrapAround: false});
 
 	// Add scrollTo on click on the navigation anchors
 	$("nav").find("a").each(function() {
@@ -64,14 +64,14 @@ function init() {
 
 	/* ===================================================================== */
 
-	$(".settings .show-path").click(function(e) {
-		e.preventDefault();
-		$(".sp-canvas").toggle();
-	}).toggle(function() {
-		$(this).text("Hide Path");
-	}, function() {
-		$(this).text("Show Path");
-	});
+//	$(".settings .show-path").click(function(e) {
+//		e.preventDefault();
+//		$(".sp-canvas").toggle();
+//	}).toggle(function() {
+//		$(this).text("Hide Path");
+//	}, function() {
+//		$(this).text("Show Path");
+//	});
 
 	$(".tweet").click(function(e) {
 		open(this.href, "", "width=550, height=450");
