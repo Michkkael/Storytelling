@@ -1,6 +1,8 @@
 $(document).ready(init);
 var pi = Math.PI;
 function init() {
+    // $('#start').addClass('fadeIn');
+    $('.wrapper').addClass('fadeIn');
 	/* ========== DRAWING THE PATH AND INITIATING THE PLUGIN ============= */
 
 	$.fn.scrollPath("getPath", {
@@ -8,7 +10,7 @@ function init() {
         rotationSpeed: Math.PI / 15 // Default is Math.PI / 15
     })
     	
-    	.moveTo(400, 50, {name: "start"})
+    	.moveTo(400, 150, {name: "start"})
     	.lineTo(400, 1000, {name: "intro"})
     	.lineTo(400, 1400)
     	.arc(1000, 1400, 600, pi, 0, true, {rotate: pi})
