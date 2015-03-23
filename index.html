@@ -50,7 +50,9 @@
 			<h2>The Storytelling</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sapiente necessitatibus, dicta quasi, quas deleniti debitis, voluptas incidunt asperiores facere ut suscipit quod. Earum optio provident, consequatur, debitis qui eveniet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora est ullam quod consequuntur id explicabo sequi eveniet dicta inventore velit aliquid modi, similique incidunt ab, aliquam quae cum hic sit!</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat, labore, iste quia laudantium placeat, expedita aut vitae eum sed itaque ullam fugit nisi. Eius vero debitis dignissimos, illo quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem vitae ea ullam consequuntur nam quasi in modi maiores adipisci perferendis culpa, harum officiis obcaecati recusandae quos, veritatis earum! Tempore, enim.</p>
-			<a href="#part1">Lets start read the beginning !</a>
+			<a href="#part1">
+			    <span><i class="fa fa-arrow-right"></i>Lets start read the beginning !</span>
+            </a>
 		</div>
 
 		<div id="part1">
@@ -64,9 +66,12 @@
 
 			<div ng-switch-when="start" class="padding">
 				<h2>Part 2</h2>
-				<p>Please choose a version :</p>
 				<ul>
-					<li ng-repeat="version in part2"><a href="" ng-click="showPart2(version)">{{version}}</a></li>
+					<li ng-repeat="version in part2">
+					    <a href="" ng-click="showPart2(version)">
+					        <span><i class="fa fa-check"></i>{{version}}</span>
+				        </a>
+				    </li>
 				</ul>
 			</div>
 			<div ng-switch-when="v1">
@@ -76,33 +81,40 @@
 			<div ng-switch-when="v2">
 				<div ng-include="'pages/v2.html'" class="padding"></div>
 			</div>
-
-			<a href="#part3">Go to part 3</a>
+			
+			<a href="#part3">
+                <span><i class="fa fa-arrow-right"></i>Go to part 3</span>
+            </a>
 		</div>
 
 		<div id="part3" ng-switch="part3State">
 
 			<div ng-switch-when="null" class="padding">
 				<h2>Part 3</h2>
-				<p>Please read the part2 before...</p>
 				<a href="#part2">
-	                <span><i class="fa fa-arrow-right"></i>Go to part 2</span>
+	                <span><i class="fa fa-arrow-right"></i>Please read part 2 before...</span>
 	            </a>
 			</div>
 
 			<div ng-switch-when="v1Chosen" class="padding">
 				<h2>Part 3</h2>
-				<p>Please choose a version :</p>
 				<ul>
-					<li ng-repeat="version in part3v1"><a href="" ng-click="showPart3(version)">{{version}}</a></li>
+					<li ng-repeat="version in part3v1">
+					    <a href="" ng-click="showPart3(version)">
+                            <span><i class="fa fa-check"></i>{{version}}</span>
+					    </a>
+					</li>
 				</ul>
 			</div>
 
 			<div ng-switch-when="v2Chosen" class="padding">
 				<h2>Part 3</h2>
-				<p>Please choose a version :</p>
 				<ul>
-					<li ng-repeat="version in part3v2"><a href="" ng-click="showPart3(version)">{{version}}</a></li>
+					<li ng-repeat="version in part3v2">
+					    <a href="" ng-click="showPart3(version)">
+                            <span><i class="fa fa-check"></i>{{version}}</span>
+                        </a>
+					</li>
 				</ul>
 			</div>
 
@@ -122,45 +134,60 @@
 				<div ng-include="'pages/v2_2.html'" class="padding"></div>
 			</div>
 
-			<a href="#part4">Go to part 4</a>
+            <a href="#part4">
+                <span><i class="fa fa-arrow-right"></i>Go to part 4</span>
+            </a>
 		</div>
 
 		<div id="part4" ng-switch="part4State">
 			<div ng-switch-when="null" class="padding">
 				<h2>Part 4</h2>
-				<p>Please read the part3 before...</p>
-				<a href="#part3">Go to part 3</a>
+				<a href="#part3">
+	                <span><i class="fa fa-arrow-right"></i>Please read part 3 before...</span>
+	            </a>
 			</div>
 
 			<div ng-switch-when="v1_1Chosen" class="padding">
 				<h2>Part 4</h2>
-				<p>Please choose a version :</p>
 				<ul>
-					<li ng-repeat="version in part4v1_1"><a href="" ng-click="showPart4(version)">{{version}}</a></li>
+					<li ng-repeat="version in part4v1_1">
+					    <a href="" ng-click="showPart4(version)">
+                            <span><i class="fa fa-check"></i>{{version}}</span>
+					    </a>
+					</li>
 				</ul>
 			</div>
 
 			<div ng-switch-when="v1_2Chosen" class="padding">
 				<h2>Part 4</h2>
-				<p>Please choose a version :</p>
 				<ul>
-					<li ng-repeat="version in part4v1_2"><a href="" ng-click="showPart4(version)">{{version}}</a></li>
+					<li ng-repeat="version in part4v1_2">
+					    <a href="" ng-click="showPart4(version)">
+                            <span><i class="fa fa-check"></i>{{version}}</span>
+					    </a>
+					</li>
 				</ul>
 			</div>
 
 			<div ng-switch-when="v2_1Chosen" class="padding">
 				<h2>Part 4</h2>
-				<p>Please choose a version :</p>
 				<ul>
-					<li ng-repeat="version in part4v2_1"><a href="" ng-click="showPart4(version)">{{version}}</a></li>
+					<li ng-repeat="version in part4v2_1">
+					<a href="" ng-click="showPart4(version)">
+                        <span><i class="fa fa-check"></i>{{version}}</span>
+					</a>
+					</li>
 				</ul>
 			</div>
 
 			<div ng-switch-when="v2_2Chosen" class="padding">
 				<h2>Part 4</h2>
-				<p>Please choose a version :</p>
 				<ul>
-					<li ng-repeat="version in part4v2_2"><a href="" ng-click="showPart4(version)">{{version}}</a></li>
+					<li ng-repeat="version in part4v2_2">
+					    <a href="" ng-click="showPart4(version)">
+                            <span><i class="fa fa-check"></i>{{version}}</span>
+					    </a>
+					</li>
 				</ul>
 			</div>
 
@@ -195,80 +222,106 @@
 			<div ng-switch-when="v2_2_2">
 				<div ng-include="'pages/v2_2_2.html'" class="padding"></div>
 			</div>
-
-			<a href="#part5">Go to part 5</a>
-
+			
+			<a href="#part5">
+                <span><i class="fa fa-arrow-right"></i>Go to part 5</span>
+            </a>
 		</div>
 
 		<div id="part5" ng-switch="part5State">
 
 	      <div ng-switch-when="null" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please read the part4 before...</p>
-	        <a href="#part4">Go to part 4</a>
+            <a href="#part4">
+                <span><i class="fa fa-arrow-right"></i>Please read part 4 before...</span>
+            </a>
 	      </div>
 
 	      <div ng-switch-when="v1_1_1Chosen" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please choose a version :</p>
 	        <ul>
-	          <li ng-repeat="version in part5v1_1_1"><a href="" ng-click="showPart5(version)">{{version}}</a></li>
+	          <li ng-repeat="version in part5v1_1_1">
+	              <a href="" ng-click="showPart5(version)">
+                      <span><i class="fa fa-check"></i>{{version}}</span>
+	              </a>
+	          </li>
 	        </ul>
 	      </div>
 
 	      <div ng-switch-when="v1_1_2Chosen" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please choose a version :</p>
 	        <ul>
-	          <li ng-repeat="version in part5v1_1_2"><a href="" ng-click="showPart5(version)">{{version}}</a></li>
+	          <li ng-repeat="version in part5v1_1_2">
+	              <a href="" ng-click="showPart5(version)">
+                      <span><i class="fa fa-check"></i>{{version}}</span>
+	              </a>
+	          </li>
 	        </ul>
 	      </div>
 
 	      <div ng-switch-when="v1_2_1Chosen" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please choose a version :</p>
 	        <ul>
-	          <li ng-repeat="version in part5v1_2_1"><a href="" ng-click="showPart5(version)">{{version}}</a></li>
+	          <li ng-repeat="version in part5v1_2_1">
+	              <a href="" ng-click="showPart5(version)">
+                      <span><i class="fa fa-check"></i>{{version}}</span>
+	              </a>
+	          </li>
 	        </ul>
 	      </div>
 
 	      <div ng-switch-when="v1_2_2Chosen" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please choose a version :</p>
 	        <ul>
-	          <li ng-repeat="version in part5v1_2_2"><a href="" ng-click="showPart5(version)">{{version}}</a></li>
+	          <li ng-repeat="version in part5v1_2_2">
+	              <a href="" ng-click="showPart5(version)">
+                      <span><i class="fa fa-check"></i>{{version}}</span>
+	              </a>
+	          </li>
 	        </ul>
 	      </div>
 
 	      <div ng-switch-when="v2_1_1Chosen" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please choose a version :</p>
 	        <ul>
-	          <li ng-repeat="version in part5v2_1_1"><a href="" ng-click="showPart5(version)">{{version}}</a></li>
+	          <li ng-repeat="version in part5v2_1_1">
+	              <a href="" ng-click="showPart5(version)">
+                      <span><i class="fa fa-check"></i>{{version}}</span>
+	              </a>
+	          </li>
 	        </ul>
 	      </div>
 
 	      <div ng-switch-when="v2_1_2Chosen" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please choose a version :</p>
 	        <ul>
-	          <li ng-repeat="version in part5v2_1_2"><a href="" ng-click="showPart5(version)">{{version}}</a></li>
+	          <li ng-repeat="version in part5v2_1_2">
+	              <a href="" ng-click="showPart5(version)">
+                      <span><i class="fa fa-check"></i>{{version}}</span>
+	              </a>
+	          </li>
 	        </ul>
 	      </div>
 
 	      <div ng-switch-when="v2_2_1Chosen" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please choose a version :</p>
 	        <ul>
-	          <li ng-repeat="version in part5v2_2_1"><a href="" ng-click="showPart5(version)">{{version}}</a></li>
+	          <li ng-repeat="version in part5v2_2_1">
+	              <a href="" ng-click="showPart5(version)">
+                      <span><i class="fa fa-check"></i>{{version}}</span>
+	              </a>
+	          </li>
 	        </ul>
 	      </div>
 
 	      <div ng-switch-when="v2_2_2Chosen" class="padding">
 	        <h2>Part 5</h2>
-	        <p>Please choose a version :</p>
 	        <ul>
-	          <li ng-repeat="version in part5v2_2_2"><a href="" ng-click="showPart5(version)">{{version}}</a></li>
+	          <li ng-repeat="version in part5v2_2_2">
+	              <a href="" ng-click="showPart5(version)">
+                      <span><i class="fa fa-check"></i>{{version}}</span>
+	              </a>
+	          </li>
 	        </ul>
 	      </div>
 
@@ -285,7 +338,7 @@
 	      </div>
 
 	      <div ng-switch-when="v1_1_2_2">
-	        <<div ng-include="'pages/v1_1_2_2.html'" class="padding"></div>
+	        <div ng-include="'pages/v1_1_2_2.html'" class="padding"></div>
 	      </div>
 
 	      <div ng-switch-when="v1_2_1_0">
@@ -328,7 +381,9 @@
 	        <div ng-include="'pages/v2_2_2_2.html'" class="padding"></div>
 	      </div>
 
-	      <a href="#conclusion">Continue to Conclusion</a>
+            <a href="#conclusion">
+                <span><i class="fa fa-arrow-right"></i>Continue</span>
+            </a>
 	    </div>
 
 		<div id="conclusion" class="padding">
