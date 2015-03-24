@@ -48,18 +48,18 @@ function partCtrl($scope) {
 
 
 /*
-v1 : title
-v2
-v1_1
-v1_2
-v2_1
-v2_2
-v1_1_1
-v1_1_2
-v1_2_1
-v1_2_2
-v2_1_1
-v2_1_2
+v1 : Tailing
+v2 : The chase
+v1_1 : An endless night
+v1_2 : Chasing anwsers
+v2_1 : A cat and mouse game.
+v2_2 : Bad revelations
+v1_1_1 : Personal reflections
+v1_1_2 : Troubled past 
+v1_2_1 : The Wedding 
+v1_2_2 : False certainties
+v2_1_1 : A moonlight tailjob 
+v2_1_2 : Calm before the Storm
 v2_2_1
 v2_2_2
 v1_1_1_1
