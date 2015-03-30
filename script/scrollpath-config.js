@@ -1,52 +1,34 @@
 $(document).ready(init);
 var pi = Math.PI;
+
 function init() {
     // $('#start').addClass('fadeIn');
     $('.wrapper').addClass('fadeIn');
+    $('#start').addClass('fadeIn');
 	/* ========== DRAWING THE PATH AND INITIATING THE PLUGIN ============= */
 
 	$.fn.scrollPath("getPath", {
         scrollSpeed: 1, // Default is 50
         rotationSpeed: Math.PI / 100 // Default is Math.PI / 15
     })
-    	
-//    	.moveTo(400, 150, {name: "start"})
-//    	.lineTo(400, 1000, {name: "intro"})
-//    	.lineTo(400, 1400)
-//    	.arc(1000, 1400, 600, pi, 0, true, {rotate: pi})
-//    	.lineTo(1600, 1000, {name: "part1"})
-//    	.lineTo(1600, -900)
-//    	.arc(1000, -900, 600, 0, -pi/2, true, {rotate: 3*pi/2})
-//    	.lineTo(400, -1500, {name: "part2"})
-//    	.lineTo(-200, -1500)
-//    	.arc(-200, -900, 600, -pi/2, pi, true, {rotate: 2*pi})
-//    	.lineTo(-800, -600, {name: "part3"})
-//    	.lineTo(-800, 1400, {name: "part4"})
-//    	.lineTo(-800, 2500)
-//    	.arc(-200, 2500, 600, pi, pi/2, true, {rotate: 5*pi/2})
-//    	.lineTo(800, 3100, {name: "part5"})
-//    	.lineTo(2000, 3100)
-//    	.arc(2000, 2500, 600, pi/2, 0, true, {rotate: 6*pi/2})
-//    	.lineTo(2600, 1500, {name: "conclusion"})
-    
-        .moveTo(1900, 150, {name: "start"})
-    	.lineTo(1900, 1000, {name: "intro"})
-    	.lineTo(1900, 1400)
-    	.arc(2500, 1400, 600, pi, 0, true, {rotate: pi})
-    	.lineTo(3100, 1000, {name: "part1"})
-    	.lineTo(3100, -900)
-    	.arc(2500, -900, 600, 0, -pi/2, true, {rotate: 3*pi/2})
-    	.lineTo(1900, -1500, {name: "part2"})
-    	.lineTo(1300, -1500)
-    	.arc(1300, -900, 600, -pi/2, pi, true, {rotate: 2*pi})
-    	.lineTo(700, -600, {rotate: 5*pi/2, name: "part3"})
-    	.lineTo(700, 1400, {rotate: 3*pi/2, name: "part4"})
-    	.lineTo(700, 2500)
-    	.arc(1300, 2500, 600, pi, pi/2, true, {rotate: 5*pi/2})
-    	.lineTo(2300, 3100, {name: "part5"})
-    	.lineTo(3500, 3100)
-    	.arc(3500, 2500, 600, pi/2, 0, true, {rotate: 6*pi/2})
-    	.lineTo(4100, 1500, {name: "conclusion"})
+    .moveTo(1900, 150, {name: "start"})
+	.lineTo(1900, 1000, {name: "intro"})
+	.lineTo(1900, 1400)
+	.arc(2500, 1400, 600, pi, 0, true, {rotate: pi})
+	.lineTo(3100, 1000, {name: "part1"})
+	.lineTo(3100, -900)
+	.arc(2500, -900, 600, 0, -pi/2, true, {rotate: 3*pi/2})
+	.lineTo(1900, -1500, {name: "part2"})
+	.lineTo(1300, -1500)
+	.arc(1300, -900, 600, -pi/2, pi, true, {rotate: 2*pi})
+	.lineTo(700, -600, {rotate: 5*pi/2, name: "part3"})
+	.lineTo(700, 1400, {rotate: 3*pi/2, name: "part4"})
+	.lineTo(700, 2500)
+	.arc(1300, 2500, 600, pi, pi/2, true, {rotate: 5*pi/2})
+	.lineTo(2300, 3100, {name: "part5"})
+	.lineTo(3500, 3100)
+	.arc(3500, 2500, 600, pi/2, 0, true, {rotate: 6*pi/2})
+	.lineTo(4100, 1500, {name: "conclusion"})
 
 	// We're done with the path, let's initate the plugin on our wrapper element
 	$(".wrapper").scrollPath({drawPath: true, wrapAround: false});
@@ -64,14 +46,4 @@ function init() {
 	});
 
 	/* ===================================================================== */
-
-//	$(".settings .show-path").click(function(e) {
-//		e.preventDefault();
-//		$(".sp-canvas").toggle();
-//	}).toggle(function() {
-//		$(this).text("Hide Path");
-//	}, function() {
-//		$(this).text("Show Path");
-//	});
-
-	}
+}

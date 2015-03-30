@@ -41,6 +41,12 @@ table {
 	transform: rotate(@deg);
 }
 
+.translate(@x, @y) {
+	-webkit-transform: translate(@x, @y);
+	-ms-transform: translate(@x, @y);
+	transform: translate(@x, @y);
+}
+
 body {
 	background: url(../assets/classy_fabric.png);
 	overflow: hidden;
@@ -143,6 +149,7 @@ nav {
 		width: 800px;
 		h2 {
 			text-align: center;
+			text-transform: uppercase;
 		}
 		p {
 			text-align: justify;
@@ -169,7 +176,8 @@ nav {
 
         header {
         	position: relative;
-        	top: 200px;
+        	top: 100px;
+        	opacity: 0;
         }
 
 		h1 {
@@ -198,6 +206,11 @@ nav {
         font-family: "Terminal Dosis", sans-serif;
         top: 850px;
         left: 1500px;
+        text-align: center;
+        a{
+        	width: 350px;
+        	text-transform: uppercase;
+        }
     }
 
 	#part1, 
@@ -210,6 +223,9 @@ nav {
             text-align: center;
         }
         li {
+        	a:not(.choice){
+        	text-transform: uppercase;
+        }
             a{
                 width: 350px;
                 &:first-child {
@@ -276,6 +292,13 @@ nav {
 .fadeIn {
 	transition: opacity 1s ease-in-out .5s;
 	opacity: 1 !important;
+	header {
+		opacity: 1 !important;
+		.translate(0, -100px);
+		transition: 
+			transform .5s ease-out .5s,
+			opacity .7s;
+	}
 }
 
   // text-rendering: optimizeLegibility;
