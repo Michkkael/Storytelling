@@ -1,3 +1,5 @@
+@green: #1abc9c;
+
 /* === CSS RESET === */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, 
@@ -65,7 +67,7 @@ h2 {
 a{
 	font-family: "Terminal Dosis", sans-serif;
 	color: #fff;
-	background-color: #1abc9c;
+	background-color: @green;
 	text-decoration: none;
     display: inline-block;
     overflow: hidden;
@@ -96,13 +98,49 @@ a{
     }
 }
 
+.margin-bottom {
+	margin-bottom: 15px;
+}
+
 .padding {
 	box-sizing: border-box;
 	padding: 50px;
 }
 
+.info {
+	position: fixed;
+	z-index: 999;
+	bottom: 10px;
+	font-size: 20px;
+	border-radius: 10px;
+	right: 30px;
+	background: @green;
+	color: #fff;
+	font-family: "Terminal Dosis", sans-serif;
+	padding: 10px 20px;
+
+	.fa-stack { 
+		margin-right: 20px;
+		&:hover {
+			cursor: pointer;
+		}
+		&::after {
+			content: '';
+			display: block;
+			width: 2px;
+			height: 60px;
+			background: darken(@green, 5%);
+			position: relative;
+			left: 50px;
+			top: -10px;
+
+		}
+	}
+
+	.fa-times { color: @green; }
+}
 nav {
-	display: none;
+	display: none; //debug
 	position: fixed;
 	z-index: 9999999;
 	bottom: 0;
@@ -202,7 +240,7 @@ nav {
 		}
 	}
 
-    #intro {
+    #intro, #conclusion {
         font-family: "Terminal Dosis", sans-serif;
         top: 850px;
         left: 1500px;
@@ -218,7 +256,10 @@ nav {
 	#part3, 
 	#part3, 
 	#part4, 
-	#part5 {
+	#part5,
+	#conclusion {
+		-webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+		transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
         ul {
             text-align: center;
         }
@@ -245,7 +286,9 @@ nav {
 			left: 600px;
 			width: 160px;
 			text-transform: uppercase;
-			padding: 15px 0 30px 0;
+			padding: 15px 0 13px 0;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 	}
 
@@ -256,36 +299,61 @@ nav {
 	}
 
 	#part2 {
-		top: -1540px;
-        left: 1700px;
+		top: -1525px;
+        left: 1645px;
 		.rotate(90deg);
 	}
 
 	#part3 {
-		left: 150px;
-		top: -650px;
+		left: 165px;
+		top: -625px;
         .rotate(-90deg);
 	}
 
 	#part4 {
-		left: 300px;
-		top: 1400px;
+		left: 440px;
+		top: 1375px;
         .rotate(90deg);
 	}
 
 	#part5 {
-		top: 3065px;
-		left: 1850px;
+		top: 3075px;
+		left: 1770px;
 		.rotate(-90deg);
 	}
 
 	#conclusion {
-		top: 1400px;
+		top: 1270px;
 		left: 3700px;
 		.rotate(180deg);
+		h3 {
+			font-size: 25px;
+			font-weight: 700;
+			i {
+				color: @green;
+			}
+		}
+		ul.names li {
+			margin-bottom: 5px;
+		}
+		li {
+			font-size: 20px;
+			a.portfolio {
+				padding: 0;
+				background: none;
+				color: #000;
+				margin: 0 !important;
+				text-transform: none !important;
+				border-bottom: 1px dotted #777;
+				width: auto;
+				border-radius: 0;
+				&:hover {
+					color: @green;
+					border-color: @green;
+				}
+			}
+		}
 	}
-
-	#credits {}
 
 }
 
@@ -301,6 +369,62 @@ nav {
 	}
 }
 
-  // text-rendering: optimizeLegibility;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+// Fix positions
+
+.v1Fix { left: 1745px !important; }
+
+.v2Fix { left: 1770px !important; }
+
+.v1_1Fix, .v1_2Fix { left: 100px !important; }
+
+.v2_1Fix { left: 5px !important; }
+
+.v2_2Fix { left: 25px !important; }
+
+.v1_1_1Fix { left: 610px !important; }
+
+.v1_1_2Fix { left: 600px !important; }
+
+.v1_2_1Fix { left: 570px !important; }
+
+.v1_2_2Fix { left: 490px !important; }
+
+.v2_1_1Fix { left: 600px !important; }
+
+.v2_1_2Fix { left: 600px !important; }
+
+.v2_2_1Fix { left: 600px !important; }
+
+.v2_2_2Fix { left: 590px !important; }
+
+.v1_1_1_1Fix { left: 1680px !important; }
+
+.v1_1_1_2Fix { left: 1630px !important; }
+
+.v1_1_2_1Fix { left : 1600px !important; }
+
+.v1_1_2_2Fix { left : 1610px !important; }
+
+.v1_2_1_0Fix { left : 1610px !important; }
+
+.v1_2_2_1Fix { left : 1600px !important; }
+
+.v1_2_2_2Fix { left : 1600px !important; }
+
+.v2_1_1_0Fix { left : 1600px !important; }
+
+.v2_1_2_1Fix { left : 1600px !important; }
+
+.v2_1_2_2Fix { left : 1650px !important; }
+
+.v2_2_1_0Fix { left : 1630px !important; }
+
+.v2_2_2_1Fix { left : 1610px !important; }
+
+.v2_2_2_2Fix { left : 1600px !important; }
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

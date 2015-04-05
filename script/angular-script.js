@@ -1,12 +1,14 @@
-function partCtrl($scope) {
+angular.module('storytelling', [])
+  .controller('partCtrl', ['$scope', function($scope) {
 
-    //Initialization
+//Initialization
     $scope.part2State = 'start';
     $scope.part3State = 'null';
     $scope.part4State = 'null';
     $scope.part5State = 'null';
+    $scope.conclusionState = 'start';
 
-    //Part2
+//Part2
     $scope.part2 = [
         {id: 'v1', title: "Tailing"}, 
         {id: 'v2', title: "The chase"}
@@ -14,9 +16,11 @@ function partCtrl($scope) {
 
     $scope.showPart2 = function(version) {
         $scope.part2State = version;
+        $scope.part2Fix = version + 'Fix';
         $scope.part3State = version + 'Chosen';
     }
-    //Part3
+
+//Part3
     $scope.part3v1 = [
         {id: 'v1_1', title: "An endless night"}, 
         {id: 'v1_2', title: "Chasing answers"}
@@ -28,9 +32,10 @@ function partCtrl($scope) {
 
     $scope.showPart3 = function (version) {
         $scope.part3State = version;
+        $scope.part3Fix = version + 'Fix';
         $scope.part4State = version + 'Chosen';
     }
-    //Part4
+//Part4
     $scope.part4v1_1 = [
         {id: 'v1_1_1', title: "Personal reflections"},
         {id: 'v1_1_2', title: "Troubled past"}
@@ -50,9 +55,10 @@ function partCtrl($scope) {
 
     $scope.showPart4 = function (version) {
         $scope.part4State = version;
+        $scope.part4Fix = version + 'Fix';
         $scope.part5State = version + 'Chosen';
     }
-    //Part5
+//Part5
     $scope.part5v1_1_1 = [
         {id: 'v1_1_1_1',title: "Kill two birds with one stone"}, 
         {id: 'v1_1_1_2',title: "As in the good times"}
@@ -79,5 +85,19 @@ function partCtrl($scope) {
 
     $scope.showPart5 = function (version) {
         $scope.part5State = version;
+        $scope.part5Fix = version + 'Fix';
     }
-}
+
+// Re-init
+    $scope.restart = function () {
+        $scope.part2State = 'start';
+        $scope.part2Fix = 'null';
+        $scope.part3State = 'null';
+        $scope.part3Fix = 'null';
+        $scope.part4State = 'null';
+        $scope.part4Fix = 'null';
+        $scope.part5State = 'null';
+        $scope.part5Fix = 'null';
+    }
+
+  }]);

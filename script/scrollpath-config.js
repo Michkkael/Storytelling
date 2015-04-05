@@ -34,16 +34,21 @@ function init() {
 	$(".wrapper").scrollPath({drawPath: true, wrapAround: false});
 
 	// Add scrollTo on click on the navigation anchors
-	$("body").find("a").each(function() {
+	$("body").find("a").not(".choice").not(".portfolio").each(function() {
 		var target = $(this).attr("href").replace("#", "");
 		$(this).click(function(e) {
 			e.preventDefault();
 			
 			// Include the jQuery easing plugin (http://gsgd.co.uk/sandbox/jquery/easing/)
 			// for extra easing functions like the one below
-			$.fn.scrollPath("scrollTo", target, 1000, "easeInOutSine");
+			$.fn.scrollPath("scrollTo", target, 1500, "easeInOutSine");
 		});
 	});
 
 	/* ===================================================================== */
 }
+jQuery(document).ready(function ($) {
+	$('aside.info .fa-stack').click(function() {
+		$('aside.info').fadeOut('slow');
+	});
+});
