@@ -8,7 +8,7 @@ function init() {
 	/* ========== DRAWING THE PATH AND INITIATING THE PLUGIN ============= */
 
 	$.fn.scrollPath("getPath", {
-        scrollSpeed: 1, // Default is 50
+        scrollSpeed: 10, // Default is 50
         rotationSpeed: Math.PI / 100 // Default is Math.PI / 15
     })
     .moveTo(1900, 150, {name: "start"})
